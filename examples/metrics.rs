@@ -7,7 +7,7 @@ const N: usize = 2;
 const M: usize = 4;
 fn main() -> Result<()> {
     let metrics = Metrics::default();
-    println!("{:?}", metrics.snapshot());
+    println!("{}", metrics);
     // start N worker and M requesters
     for idx in 0..N {
         task_work(idx, metrics.clone())?; // Arc::clone(&metrics.data)
